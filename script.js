@@ -70,7 +70,7 @@ $(document).ready(function() {
         const h_b = $('.paralax-bg').outerHeight();
         const p_b = s / h_b * 100;
 
-    const yOffset = (h_b - h_b * (1 + $(this).outerWidth() / 90000 * p_b)) / 2;
+    const yOffset = (h_b - h_b * (1 + $(this).outerWidth() / 90000 * p_b)) / 2.7;
 
         
         const animationEndPoint = 140;

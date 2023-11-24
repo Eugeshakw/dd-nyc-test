@@ -191,14 +191,18 @@ select {
   fill: var(--logo-text-color);
 }
 
+
 /* aboutUs */
 
 .con-hero-txt-aboutUs{
 margin-bottom: 92px;
 }
 .con-hero-txt-aboutUs{
+  position: relative;
+  z-index: 100;
   display: flex;
   gap: 167px;
+  bottom: 0;
 }
 
 .container-aboutUs{
@@ -261,6 +265,7 @@ letter-spacing: 1.3px;
   background-size: cover;
   z-index: -1;
   max-width: 1920px;
+  margin-bottom: 130px;
   
 }
 .block{
@@ -312,6 +317,51 @@ height: auto;
 }
 
 
+/* section AboutUs */
 
+.tittle-aboutUs{
+  color: var(--primary-text-color);
+/* 1440 px/H2 */
+font-family: Outfit;
+font-size: 30px;
+font-style: normal;
+font-weight: 500;
+line-height: 130%; /* 39px */
+letter-spacing: 3px;
+text-transform: uppercase;
+}
+
+.par-aboutUs-section{
+  color: var(--primary-text-color);
+/* 1440 px/Big Body Caps */
+font-family: Outfit;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 130%; /* 23.4px */
+letter-spacing: 1.08px;
+text-transform: uppercase;
+}
+
+.par-aboutUs-section:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+.par-aboutUs-last {
+  margin-bottom: 35px;
+}
+.con-txt-aboutUsSection{
+  display: flex;
+  flex-direction: column;
+
+
+}
+.con-aboutUs{
+  display: flex;
+}
+.imgOne-aboutUs{
+  margin-top: 196px;
+
+  margin-right: 30px;
+}
 
 
