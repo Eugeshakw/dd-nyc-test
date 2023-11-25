@@ -7,6 +7,21 @@
      <symbol id="icon-vector-down" viewBox="0 0 51 32">
       <path   opacity=".8" d="m1.897 12.252 16.576 16.576a6.369 6.369 0 0 0 4.512 1.871 6.375 6.375 0 0 0 4.512-1.871l16.576-16.576c4.032-4.032 1.152-10.944-4.544-10.944H6.377c-5.696 0-8.512 6.912-4.48 10.944z"/>
     </symbol>
+
+  <symbol id="arrow-right" viewBox="0 0 243 14">
+  
+
+        <path d="M141 6.5h100v1H141z"/>
+        
+        <path  d="m235.5 1 6 6-6 6"/>
+       
+   
+  </symbol>
+
+  <symbol id="arrow-left">
+   <path   d="M101.5 7.5H1.5v-1h100z"/>
+    <path   d="M7 13 1 7l6-6"/>
+  </symbol>
     
   </defs>
 </svg>
