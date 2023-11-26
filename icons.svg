@@ -20,7 +20,7 @@
 
   <symbol id="arrow-left">
    <path   d="M101.5 7.5H1.5v-1h100z"/>
-    <path   d="M7 13 1 7l6-6"/>
+    <path   d="M7 13 1 7l6-6" stroke-opacity="0.2"/>
   </symbol>
     
   </defs>

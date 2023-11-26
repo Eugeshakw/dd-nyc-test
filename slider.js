@@ -1,103 +1,80 @@
-const mySlider = new Splide("#mySlider", {
-   pagination: false,
+// const mySlider = new Splide("#mySlider", {
+//    pagination: false,
    
-})
-mySlider.mount()
+// })
+// mySlider.mount()
 
 
 
 const btnRight = document.querySelector('#btn-right');
 const btnLeft = document.querySelector('#btn-left');
-const mainBlock = document.querySelectorAll('.splide__track');
+const imgSlideList = document.querySelector('.img-slide-list').children;
+const txtSlideList = document.querySelector('.txt-slide-list').children;
+const txtAnimation = document.querySelectorAll('.slide-animate');
+let currentSlideIndex = 0;
 
-const imgSlider = document.querySelectorAll('.img-slider');
-const imgSliderTwo = document.querySelectorAll('.img-slider-two');
+btnRight.addEventListener('click', handleRightClick);
+btnLeft.addEventListener('click', handleLeftClick);
+btnLeft.disabled = true;
+txtSlideList[0].classList.add('img-slider-opacityTrue');
+btnLeft.firstElementChild.classList.add('btn-disabled')
 
-const blockAnimate = document.querySelectorAll('.slide-animate');
-
-console.log(btnRight);
-console.log(btnLeft);
-
-
-
-function handleClick()  {
-
-
-
-   
-    
-    // mainBlock.forEach(element => {
-    //     element.classList.add('con-test-main-disabled')
-        
-    // })
-    imgSlider.forEach(element => {
-    element.classList.add('img-slider-opacityFalse');
-    });
-
-    imgSliderTwo.forEach(element => {
-        element.classList.add('img-slider-opacityTrue');
-    });
-    
-    
-
-    setTimeout(() => {  
-        
-        handleOpacity()
-        blockAnimationOpen()
-        
-        
-        // imgAnimationClouse()
-    }, 500);
-
-    setTimeout(()=> {
-        blockAnimationClouse()
-        
-    },1000)
-
-    
-
+function handleRightClick() {
+    currentSlideIndex = (currentSlideIndex + 1) % imgSlideList.length;
+    updateSlide();
+    updateButtonState();
+    console.log('Switched to the next image');
+    btnLeft.firstElementChild.classList.remove('btn-disabled')
+    imgSlideList[0].classList.add('img-slider-opacityFalse')
 }
 
-
-function blockAnimationOpen() {
-    
-    blockAnimate.forEach(element => {
-        element.classList.add('slide-up-wrap');
-    });
-
+function handleLeftClick() {
+    currentSlideIndex = (currentSlideIndex - 1 + imgSlideList.length) % imgSlideList.length;
+    updateSlide();
+    updateButtonState();
+    console.log('Switched to the previous image');
+    btnRight.firstElementChild.classList.remove('btn-disabled')
 }
-function blockAnimationClouse() {
-         blockAnimate.forEach(element => {
-            element.classList.remove('slide-up-wrap'); 
-    });
 
+function updateSlide() {
+    for (let i = 0; i < imgSlideList.length; i++) {
+        if (i === currentSlideIndex) {
+            imgSlideList[i].classList.add('img-slider-opacityTrue');
+            txtSlideList[i].classList.add('img-slider-opacityTrue');
+            txtAnimation[i].classList.add('slide-up-wrap');
+            txtAnimation[i].addEventListener('animationend', removeSlideUpWrap);
+        } else {
+            imgSlideList[i].classList.remove('img-slider-opacityTrue');
+            txtSlideList[i].classList.remove('img-slider-opacityTrue');
+            txtAnimation[i].classList.remove('slide-up-wrap');
+            txtAnimation[i].removeEventListener('animationend', removeSlideUpWrap);
+        }
+    }
+}
+
+function updateButtonState() {
+    btnLeft.disabled = currentSlideIndex === 0;
+    btnRight.disabled = currentSlideIndex === imgSlideList.length - 1;
+
+    if(btnRight.disabled){
+        btnRight.firstElementChild.classList.add('btn-disabled')
         
-}
-
-function imgAnimationClouse() {
-
-    imgSliderTwo.forEach(element => {
-        element.classList.remove('img-slider-opacityTrue');
-    });
-
-    imgSlider.forEach(element => {
-        element.classList.remove('img-slider-opacityFalse');
-    });
-
+    }
+    if(btnLeft.disabled){
+        btnLeft.firstElementChild.classList.add('btn-disabled')
+    }
     
 }
 
-
-function handleOpacity() {
-    
-    mainBlock.forEach(element => {
-        element.classList.remove('con-test-main-disabled')
-    })
-
+function removeSlideUpWrap() {
+    this.classList.remove('slide-up-wrap');
 }
 
-btnRight.addEventListener('click', handleClick);
-btnLeft.addEventListener('click', handleClick);
+
+
+
+
+
 
 
 

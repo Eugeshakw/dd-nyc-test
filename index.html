@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>dd.nyc</title>
-    <link
+    <!-- <link
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
       rel="stylesheet"
-    />
+    /> -->
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,10 +20,10 @@
       rel="stylesheet"
       href="node_modules/modern-normalize/modern-normalize.css"
     />
-    <link
+    <!-- <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+  /> -->
   </head>
   <body>
     <header class="header">
@@ -232,9 +232,6 @@
 
       <section class="section-testimonials">
         <div class="container">
-
-          
-
           <div class="con-tittleBtn-test">
             <h3 class="txt-tittle-test">testimonials</h3>
             <button type="button" class="btn-Test">All Testimonials</button>
@@ -249,46 +246,53 @@
               </div>
             </div>
 
-            <div
-              id="mySlider"
-              class="splide"
-              role="group"
-              aria-label="Splide Basic HTML Example"
-              >
-              <div class="splide__track ">
-
-                <div class="splide__arrows">
-                  <button id="btn-right" class="splide__arrow splide__arrow--prev animate-button">
-                   <svg class="arrow-left-svg" width="100" height="12">
-                     <use href="./icons.svg#arrow-right"></use>
-                   </svg>
-                  </button>
-                  <button id="btn-left" class="splide__arrow splide__arrow--next animate-button">
-                    <svg class="arrow-right-svg" width="100" height="12">
-                      <use href="./icons.svg#arrow-right"></use>
-                    </svg>
-                  </button>
+            <div class="container-slider-block">
+              <div class="img-slide">
+                <div>
+                  <ul class="img-slide-list">
+                    <li class="img-slide-item">
+                      <img
+                        src="./img/img-sliderOne.jpg"
+                        width="274px"
+                        height="326px"
+                        id="img1"
+                      />
+                    </li>
+                    <li class="img-slide-item img-slider-opacityFalse">
+                      <img
+                        src="./img/img-ServicesTwo.jpg"
+                        alt=""
+                        width="274px"
+                        height="326px"
+                        id="img2"
+                      />
+                    </li>
+                    <li class="img-slide-item img-slider-opacityFalse">
+                      <img
+                        src="./img/img-Sevicesthree.jpg"
+                        alt=""
+                        width="274px"
+                        height="326px"
+                        id="img3"
+                      />
+                    </li>
+                    <li class="img-slide-item img-slider-opacityFalse">
+                      <img
+                        src="./img/img-ServicesOne.jpg"
+                        width="274px"
+                        height="326px"
+                        alt=""
+                        id="img4"
+                      />
+                    </li>
+                  </ul>
                 </div>
-                
-                <ul class="splide__list ">
-                  <li class="splide__slide con-main-slider">
-                    <img
-                      
-                      class="img-slider"
-                      src="./img/img-sliderOne.jpg"
-                      width="274px"
-                      height="326px"
-                      alt=""
-                    />
-                    <img
-                      class="img-slider-two"
-                      src="./img/img-ServicesTwo.jpg"
-                      width="274px"
-                      height="326px"
-                      alt=""
-                    />
+              </div>
 
-                    <div class="slide-content">
+              <div id="mySlider" class="txt-slide-con">
+                <div>
+                  <ul class="txt-slide-list">
+                    <li class="con-main-slider img-slider-opacityFalse">
                       <div class="slide-animate"></div>
                       <p class="par-txt-slider">
                         “In the almost 20 years that we've lived in Austin, Lisa
@@ -306,74 +310,30 @@
                         in this city and beyond.”
                       </p>
                       <h4 class="tittle-txt-slider">Dan Griffiths</h4>
-                    </div>
-                  </li>
-
-                  <li class="splide__slide con-main-slider">
-                    <img
-                      class="img-slider"
-                      src="./img/img-ServicesTwo.jpg"
-                      width="274px"
-                      height="326px"
-                      alt=""
-                    />
-                    
-                    <img
-                      class="img-slider-two"
-                      src="./img/img-sliderOne.jpg"
-                      width="274px"
-                      height="326px"
-                      alt=""
-                    />
-
-                    <div class="slide-content ">
+                    </li>
+                    <li class="con-main-slider img-slider-opacityFalse">
                       <div class="slide-animate"></div>
-                      <p class="par-txt-slider ">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, placeat labore maiores dolorum aspernatur expedita. Dolore maxime tempora rem similique mollitia non eligendi nulla, fuga nam incidunt voluptatibus voluptatem magni.
-                        Voluptates facere, soluta veritatis ducimus dolorum eveniet ratione obcaecati odio, quidem quo repellat, quas quis commodi nemo eius sed modi dolorem. Non minima laborum at ipsum? A cupiditate quaerat nostrum?
-                        Labore at omnis magni perspiciatis error officia repellat rem animi dolore incidunt asperiores ex, tempora quas? Tempore totam recusandae dolore expedita aliquam, consequuntur vero nisi, aliquid harum adipisci, temporibus accusamus.
-                        Nobis, hic magnam tempore facere at commodi inventore laborum veritatis delectus, culpa dolore eum recusandae molestias voluptates earum. Cumque vel ad recusandae nemo qui? Temporibus assumenda natus earum praesentium quos?
-                        Modi rerum pariatur repudiandae deserunt quaerat ut dicta quas cumque, tempore, atque animi consectetur omnis recusandae voluptatum repellendus officia laboriosam reprehenderit distinctio necessitatibus labore dolores rem quae. Quaerat, exercitationem delectus!
-                        Obcaecati provident iure eum harum dolorum beatae! Ullam rerum architecto repudiandae id assumenda perferendis aspernatur error inventore omnis doloremque consequuntur placeat voluptatem, explicabo, nostrum provident dolores maxime debitis officia ad.
-                        Hic, vero ipsam sunt quidem totam fugit quis ab laboriosam officiis excepturi dolore corporis! Porro vel, placeat quaerat unde numquam similique perferendis, corrupti tenetur nihil quia est? Voluptates, possimus vero!
-                        Sint harum cupiditate id quod fugiat non consectetur sunt voluptas ducimus cum unde delectus, ullam fugit obcaecati soluta qui nihil esse provident, odit necessitatibus repellat! Eius facilis culpa voluptatem qui!
-                        Tenetur asperiores nulla molestias officiis veniam sit expedita libero nisi qui, quasi beatae quos ex in, delectus recusandae, eum vitae suscipit cum facilis quisquam. Deleniti expedita quibusdam voluptatum cupiditate illum!
-                        Officia a beatae iste accusamus voluptatem tempore! Accusamus labore cumque, consectetur, incidunt rerum libero aut eius maiores alias laudantium id. Fugiat consequuntur vero error deleniti corporis impedit rem, accusamus placeat.
-                        Pariatur magnam asperiores quas delectus deserunt obcaecati facere rem. Ratione itaque est veniam error deleniti tenetur aperiam, vitae nulla nobis similique illo repellendus at aut eum repellat ipsa quaerat numquam.
-                        Dolorem consequatur facilis ad vitae repellat? Non est unde quisquam repellendus mollitia? Nihil tempore illo, nesciunt amet nulla sunt optio. Reiciendis molestias quidem in voluptatum labore doloremque placeat aspernatur sed.
-                        Facilis neque odit molestias voluptates, dicta quod eaque quo ab? Ipsam blanditiis odio accusamus, sequi repudiandae eum, voluptatem et similique, laborum delectus ut molestias aperiam nemo dolores quaerat quae reiciendis.
-                        Aliquid voluptatum praesentium quaerat pariatur tempore ab porro ipsum officiis a in tempora sint accusantium quis voluptas ducimus aut non quam, doloribus quidem unde sit expedita, quos repellat. Delectus, rem!
-                        Ratione alias, et, consequuntur nam mollitia esse est atque magnam excepturi in quia modi assumenda culpa, cupiditate eos nobis voluptatem. Architecto maxime, cumque rem maiores necessitatibus soluta et eveniet consectetur!
-                        Veritatis consectetur facilis nesciunt magni. Ab minus voluptatem corrupti eos. Dolorum aliquam sapiente dignissimos nisi eos officiis reiciendis eveniet quasi officia, ipsa provident quibusdam beatae eaque expedita consectetur. Pariatur, consequuntur.
-                        Quae, ab deleniti suscipit, sequi aut autem odit assumenda facilis impedit inventore dolor pariatur, et porro tenetur delectus non. Excepturi recusandae id ullam, ipsa sapiente fugiat tenetur! Recusandae, nulla dolorum.
-                        Totam, non? Obcaecati rem perferendis cupiditate. Cumque eum suscipit placeat reprehenderit? Ipsam voluptate rerum natus nemo quidem, qui non ab sunt, placeat explicabo necessitatibus. Tenetur impedit soluta excepturi expedita eum?
-                        Minus aliquam repellendus a eius neque sequi sapiente obcaecati non libero doloribus temporibus repudiandae necessitatibus et, facilis architecto harum veritatis accusamus voluptatum nesciunt perspiciatis aut voluptatibus esse laborum! Voluptate, soluta.
-                        Veritatis in consectetur nisi ducimus laborum odio, at non aperiam dolorum! Nulla quidem quibusdam alias minus non. Nihil, mollitia. Ut dignissimos laboriosam, exercitationem ratione veniam facere in. Cupiditate, delectus accusamus!
-                        Perferendis deleniti similique repudiandae minus fugit aliquam praesentium eos harum ipsam eligendi debitis maiores voluptatem quasi voluptates, ducimus vitae nulla commodi. Culpa, possimus illo nisi ea dolorum assumenda suscipit! Reprehenderit!
-                        Est dicta repellendus accusamus quos molestias aliquam ad rerum soluta repudiandae dolorum numquam, esse saepe voluptatem dolorem, harum, facilis doloribus sed vitae ratione ab eos voluptatum impedit dolores. Nihil, iure.
-                        Atque vitae deserunt, expedita dolorem est facere laboriosam unde tempore repudiandae dignissimos facilis possimus, rerum eum error maiores suscipit libero cupiditate qui laudantium eligendi nemo incidunt eveniet? Vitae, repudiandae veniam!
-                        Illum enim ipsam placeat aliquam! Commodi, vel, molestiae officiis nihil exercitationem delectus modi, officia et ab quidem sed deleniti accusamus dicta voluptatem. Quis, labore. Accusantium rem exercitationem odit obcaecati qui.
-                        Porro ducimus consequuntur numquam veritatis nemo illum. Velit, repudiandae? Numquam itaque amet, nam magni ea minus et debitis est totam! Officiis ullam fuga quod sequi maiores non tempora sit quas.
-                        Nemo at repellendus et maiores provident, accusamus deleniti accusantium. Deleniti, sed! Molestiae quas exercitationem laudantium, iusto dolores deserunt blanditiis, quis atque ut accusantium quaerat minus soluta quod vero iste velit.
-                        Voluptatibus nostrum voluptate ipsum, beatae voluptatum animi quos corporis quis. Placeat dicta soluta rerum voluptatibus itaque similique nulla beatae, hic culpa, in sunt doloremque neque consequatur. Maiores vero ea magnam?
-                        Itaque facilis velit quis, a ipsa neque exercitationem temporibus! Iure cupiditate culpa quod iusto aperiam corporis laudantium sint voluptates, delectus quas accusantium ipsam reprehenderit porro distinctio doloribus quasi magnam. Aperiam.
-                        Autem unde vitae fugit! Recusandae animi architecto similique eum possimus et numquam fuga ipsa aspernatur. Praesentium vel optio consequatur omnis ratione fuga iste, dignissimos veritatis hic quibusdam, perferendis dolores ipsam!
-                        Voluptatum quae ipsa quisquam. Nam sunt earum at assumenda molestiae? Eaque ipsa rem nesciunt reiciendis deleniti voluptatum commodi officia. Ratione soluta accusantium, voluptas at voluptates dolores unde provident veritatis odio.
+                      <p class="par-txt-slider">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Saepe, placeat labore maiores dolorum aspernatur
+                        expedita. Dolore maxime tempora rem similique mollitia
+                        non eligendi nulla, fuga nam incidunt voluptatibus
+                        voluptatem magni. Voluptates facere, soluta veritatis
+                        ducimus dolorum eveniet ratione obcaecati odio, quidem
+                        quo repellat, quas quis commodi nemo eius sed modi
+                        dolorem. Non minima laborum at ipsum? A cupiditate
+                        quaerat nostrum? Labore at omnis magni perspiciatis
+                        error officia repellat rem animi dolore incidunt
+                        asperiores ex, tempora quas? Tempore totam recusandae
+                        dolore expedita aliquam, consequuntur vero nisi, aliquid
+                        harum adipisci, temporibus accusamus. Nobis, hic magnam
+                        tempore facere at commodi inventore laborum veritatis
                       </p>
                       <h4 class="tittle-txt-slider">Dan Griffiths</h4>
-                    </div>
-                  </li>
-                  <li class="splide__slide con-main-slider">
-                    <img
-                      class="img-slider"
-                      src="./img/img-sliderOne.jpg"
-                      width="274px"
-                      height="326px"
-                      alt=""
-                    />
-                    <div class="slide-content">
+                    </li>
+                    <li class="con-main-slider img-slider-opacityFalse">
                       <div class="slide-animate"></div>
-                      <p class="par-txt-slider ">
+                      <p class="par-txt-slider">
                         “In the almost 20 years that we've lived in Austin, Lisa
                         has supported three big moves for us, and we can't say
                         enough how much her expertise and professionalism mean
@@ -389,11 +349,47 @@
                         in this city and beyond.”
                       </p>
                       <h4 class="tittle-txt-slider">Dan Griffiths</h4>
-                    </div>
-                  </li>
-                </ul>
+                    </li>
+
+                    <li class="con-main-slider img-slider-opacityFalse">
+                      <div class="slide-animate"></div>
+                      <p class="par-txt-slider">
+                        “ beyond.” that we've lived in Austin, Lisa has
+                        supported three big moves for us, and we can't say
+                        enough how much her expertise and professionalism mean
+                        to us. Her advice and support, along with the amazing
+                        Munoz team, have all created an environment of safety
+                        and confidence in each project, from start to finish. I
+                        wish I could name all who have contributed, but I
+                        believe mention should go to Helen Gregg and Carlisle
+                        Kennedy during our recent sale of our Georgetown home to
+                        the year-long construction and final completion of the
+                        new Wimberley house. We have consistently promoted Lisa
+                        and Realty Austin to our friends and family as the best
+                        in this In the almost 20 years
+                      </p>
+                      <h4 class="tittle-txt-slider">Dan Griffiths</h4>
+                    </li>
+                  </ul>
+                </div>
               </div>
+
+              <div class="slide-arrow">
+                <button id="btn-left" class="animate-button">
+                  <svg class="arrow-left-svg" width="100" height="12">
+                    <use href="./icons.svg#arrow-left"></use>
+                  </svg>
+                </button>
+                <button id="btn-right" class="animate-button">
+                  <svg class="arrow-right-svg" width="100" height="12">
+                    <use href="./icons.svg#arrow-left"></use>
+                  </svg>
+                </button>
+              </div>
+
             </div>
+
+            
 
             <!-- <div class="con-main-slider">
               <img
@@ -424,6 +420,13 @@
           </div>
         </div>
       </section>
+
+      <section class="section-footer">
+        <div class="container">
+          
+        </div>
+
+      </section>
     </main>
     <footer class="container"></footer>
     <script
@@ -436,8 +439,5 @@
   <script type="module" src="./script.js"></script>
 
   <script type="module" src="./slider.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-
-  
-
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> -->
 </html>
