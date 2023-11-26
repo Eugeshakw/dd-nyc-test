@@ -535,6 +535,15 @@ text-transform: uppercase;
 }
 .con-test-main{
   margin-right: 167px;
+
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+
+.con-test-main-disabled{
+  opacity: 0;
+  transition: opacity 0.5s ease; 
 }
 .date-txt{
   color: var(--primary-text-color);
@@ -589,20 +598,32 @@ text-transform: uppercase;
 
 .img-slider{
   margin-right: 30px;
-  opacity: 1;
-  transition: opacity 0.1s ease; 
+}
+.img-slider-two{
+  position: absolute;
+
 }
 
-.img-slider-disabled{
-  opacity: 0;
-  transition: opacity 0.1s ease; 
+.img-slider{
+  opacity: 1;
+  transition: opacity 0.5s;
+
 }
+.img-slider-two{
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+
+
 
 
 
 .arow-right-svg{
  
 }
+
+
 .splide__arrow {
   top: 0;
   background: none; 
@@ -699,3 +720,9 @@ text-transform: uppercase;
   }
 }
 
+.img-slider-opacityFalse{
+  opacity: 0;
+}
+.img-slider-opacityTrue{
+  opacity: 1;
+}
