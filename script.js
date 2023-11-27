@@ -64,34 +64,44 @@
 //     });
 // });
 
-$(document).ready(function() {
-    $(window).scroll(function() {
-        const s = $(this).scrollTop();
-        const h_b = $('.paralax-bg').outerHeight();
-        const p_b = s / h_b * 100;
+// $(document).ready(function() {
+//     $(window).scroll(function() {
+//         const s = $(this).scrollTop();
+//         const h_b = $('.paralax-bg').outerHeight();
+//         const p_b = s / h_b * 100;
 
-    const yOffset = (h_b - h_b * (1 + $(this).outerWidth() / 90000 * p_b)) / 2.7;
+//     const yOffset = (h_b - h_b * (1 + $(this).outerWidth() / 90000 * p_b)) / 2.7;
 
         
-        const animationEndPoint = 140;
+//         const animationEndPoint = 140;
 
-        if (s < animationEndPoint) {
-            // Добавление/удаление класса в зависимости от прокрутки
-            if (s > 100) {
-                $('.jarallax').addClass('animate');
-            } else {
-                $('.jarallax').removeClass('animate');
-            }
+//         if (s < animationEndPoint) {
+//             // Добавление/удаление класса в зависимости от прокрутки
+//             if (s > 100) {
+//                 $('.jarallax').addClass('animate');
+//             } else {
+//                 $('.jarallax').removeClass('animate');
+//             }
 
-            // Применение CSS-свойств
-            $('.jarallax').css({
-                'transition': 'transform 5s ease, opacity 0.5s ease',
-                'transform': 'translateY(' + yOffset + 'px)',
-            });
-        }
+//             // Применение CSS-свойств
+//             $('.jarallax').css({
+//                 'transition': 'transform 5s ease, opacity 0.5s ease',
+//                 'transform': 'translateY(' + yOffset + 'px)',
+//             });
+//         }
+//     });
+// });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const parallaxElement = document.getElementById("parallaxElement");
+  
+    window.addEventListener("scroll", function () {
+      const scrollPosition = window.scrollY;
+      const translateYValue = Math.max(-50, -scrollPosition / 2);
+      parallaxElement.style.transform = "translateY(" + translateYValue + "px)";
     });
-});
-
+  });
 
 
 
