@@ -115,7 +115,7 @@ select {
   min-width: 1440px;
   padding-left: 60px;
   padding-right: 60px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 @media screen and (min-width: 1920px){
@@ -173,7 +173,7 @@ select {
   border: var(--default-btn-color-contact);
   background-color: var(--default-btn-color-contact);
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1550px) and (min-width: 1920px) {
   .con-header{
     top: 35px;
   }
@@ -267,7 +267,7 @@ select {
 }
 
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1550px) and (min-width: 1920px) {
   .tittle-txt-con {
   
     min-width: 1618px;
@@ -374,7 +374,7 @@ letter-spacing: 1.3px;
 
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1550px) and (min-width: 1920px) {
   .marg-about-us{
     margin-left: 240px;
   }
@@ -471,6 +471,8 @@ height: auto;
 
 }
 
+
+
 .block h2{
   position: relative;
   display: block;
@@ -504,24 +506,9 @@ height: auto;
 
 }
 
-.img-paralax{
-  background: url(./img/img-paralax.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 11;
-  width: 100%;
-  min-height: 816px;
-  height: auto;
-  position: absolute;
-  left: 0;
-  top: 205px;
-  transform: translateY(-50px);
-}
-.img-parallax-animate {
-  transition: transform 0.3s ease;
-}
 
-@media screen and (min-width: 1920px) {
+
+@media screen and (min-width: 1550px) and (min-width: 1920px) {
   .paralax-bg{
   
     background-image: url(./img/sky.jpg);
@@ -705,7 +692,7 @@ letter-spacing: 0.84px;
   padding-bottom: 130px;
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1550px) and (min-width: 1920px) {
   .tittle-aboutUs{
 
     color: var(--primary-text-color);
@@ -757,6 +744,7 @@ letter-spacing: 0.84px;
   .con-aboutUs{
     display: flex;
     align-items: center;
+    justify-content: center;;
   }
   .con-img-AboutUs{
     display: flex;
@@ -855,6 +843,7 @@ letter-spacing: 0.84px;
 .con-services-block{
   display: flex;
   gap: 30px;
+  margin-bottom: 130px;
 }
 .con-services{
   padding-bottom:130px
@@ -899,19 +888,19 @@ letter-spacing: 0.84px;
 text-align: start;
 min-width: 420px;
 }
-@media screen and (min-width:1920px) {
+@media screen and (min-width: 1550px) and (min-width: 1920px) {
   .img-services{
     min-width: 570px;
     min-height: 517px;
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1550px) and (min-width: 1920px) {
   .con-services-block{
     display: flex;
-    gap: 30px;
+    gap: 170px;
   }
   .con-services{
-    padding-bottom:130px
+    margin-bottom: 230px;
   }
   .tittle-block-services{
     color: var(--primary-text-color);
@@ -977,7 +966,7 @@ text-transform: uppercase;
 max-width: 481px;
 }
 
-@media screen and (min-width:1920px) {
+@media screen and (min-width: 1550px) and (min-width: 1920px) {
   .video{
     min-width: 1920px;
     min-height: 941px;
@@ -1041,7 +1030,7 @@ max-width: 481px;
 }
 
 /* block left tasty media */
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1550px) and (min-width: 1920px) {
   .con-main-test {
     display: flex;
     justify-content: space-between;
@@ -1113,7 +1102,7 @@ text-transform: uppercase;
   border: none;
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1550px) and (min-width: 1920px) {
   .txt-tittle-test{
     font-family: Outfit;
     font-size: 36px;
@@ -1146,7 +1135,7 @@ text-transform: uppercase;
   opacity: 1;
   transition: opacity 0.5s ease;
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1550px) and (min-width: 1920px) {
   .con-test-main{
     margin-right: 200px;
   
@@ -1210,7 +1199,7 @@ line-height: 150%; /* 24px */
 letter-spacing: 1.6px;
 text-transform: uppercase;
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1550px) and (min-width: 1920px) {
   .date-txt{
     color: var(--primary-text-color);
    
@@ -1360,14 +1349,102 @@ text-transform: uppercase;
   backface-visibility: hidden;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 1550px) and (min-width: 1920px) {
   .slide-up-wrap{
     width: 735px;
   };
 }
-.img-services{
+
+.img-services-container {
+  display: flex;
+  position: relative;
+  width: 420px;
+  height: 380px;
   border-radius: 10px;
+  z-index: 11;
+  flex-direction: column;
 }
+
+.img-services {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0); /* Начальный цвет фона */
+  transition: background-color 0.4s ease; /* Анимация перехода */
+}
+
+
+.button-overlay {
+  position: absolute;
+  bottom: 20px; /* Отступ снизу */
+  right:  30px;
+  transform: translateX(-50%);
+  opacity: 0;
+  background-color: #FFF;
+  border-radius: 50%;
+  z-index: 10;
+  fill: var(--default-btn-color);
+  stroke: var(--default-btn-color);
+  cursor: pointer;
+  right: 20px;
+
+}
+
+
+
+.img-services-container:hover .button-overlay {
+  opacity: 1;
+  -webkit-animation: slide-out-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: slide-out-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.img-services-container:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.4); /* Цвет фона при ховере */
+}
+
+
+@media screen and (min-width: 1920px) {
+  .img-services-container {
+    display: flex;
+    position: relative;
+    width: 420px;
+    height: 380px;
+    border-radius: 10px;
+    flex-direction: column;
+    margin-right: 20px; /* Добавляем отступы справа */
+  }
+  
+  .img-services {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 570px;
+    height: 517px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0); /* Начальный цвет фона */
+    transition: background-color 0.4s ease; /* Анимация перехода */
+  }
+  
+  .img-services-container:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.4); /* Цвет фона при ховере */
+  }
+}
+
 
 
 @keyframes slide-in-animation {
@@ -1414,7 +1491,7 @@ text-transform: uppercase;
   border-radius: 10px;
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1550px) and (min-width: 1920px) {
   .card-slide-item{
     border-radius: 10px;
 
@@ -1443,7 +1520,7 @@ text-transform: uppercase;
   bottom: 0;
   left: 0;
 }
-@media screen and (min-width:1920px) {
+@media screen and (min-width: 1550px) and (min-width: 1920px) {
   .txt-slide-con{
     position: absolute;
     left: 430px;
@@ -1511,7 +1588,7 @@ margin-bottom: 50px;
 .con-labe{
   margin-right: 14px;
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1550px) and (min-width: 1920px) {
   .section-footer{
     background-color: #000000;
   }
@@ -1579,7 +1656,7 @@ margin-bottom: 50px;
   animation: slide-out-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1550px) and (min-width: 1920px) {
   .input-form{
     border-radius: 100px;
     background: var(--white-opacity-10, rgba(255, 255, 255, 0.10));
@@ -1670,7 +1747,7 @@ margin-bottom: 8px;
   text-transform: uppercase; 
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1550px) and (min-width: 1920px) {
   .tittle-consumerInfo{
     color: var(--par-text-color);
     /* 1920 px/H5 */
@@ -1806,7 +1883,7 @@ text-transform: uppercase;
 
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1550px) and (min-width: 1920px) {
   .icon-blur{
     width: 71px;
     opacity: 0.5;
@@ -1834,7 +1911,7 @@ text-transform: uppercase;
 
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1550px) and (min-width: 1920px) {
   .par-addres-tittle{
     color: var(--White, #FFF);
     /* 1920 px/H5 */
@@ -1994,7 +2071,7 @@ text-transform: uppercase;
 
 }
 
-@media screen and (min-width:1920px) {
+@media screen and (min-width: 1550px) and (min-width: 1920px) {
   .par-last-footer{
     color: var(--white-opacity-40, rgba(255, 255, 255, 0.40));
     
@@ -2044,10 +2121,15 @@ text-transform: uppercase;
             transform: translateX(0);
     opacity: 1;
   }
-  100% {
+  50% {
     -webkit-transform: translateX(200px);
             transform: translateX(200px);
     opacity: 0;
+  }
+  100%{
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
   }
  
 }
@@ -2057,10 +2139,15 @@ text-transform: uppercase;
             transform: translateX(0);
     opacity: 1;
   }
-  100% {
+  50% {
     -webkit-transform: translateX(200px);
             transform: translateX(200px);
     opacity: 0;
+  }
+  100%{
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
   }
  
 }
