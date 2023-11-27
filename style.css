@@ -1311,31 +1311,7 @@ text-transform: uppercase;
 
 /* Анимация */
 
-/* .slide-in {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
 
-} */
-
-/* .text-animation {
-  position: relative;
-  animation: slide-in-animation 1000ms ease-in-out infinite;
-  
-} */
-
-/* .slide-content{
-  position: relative;
-} */
-
-/* .slide-animate{
-  position: absolute;
-  width: 566px;
-  height: 566px;
-  z-index: 10;
-  background-color: #fff;
-  opacity: 1;
-} */
 
 .slide-up-wrap {
   position: absolute;
