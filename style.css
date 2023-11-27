@@ -137,7 +137,7 @@ select {
   position: absolute;
   width: 100%;
   z-index: 10;
-
+  top: 20px;
 }
 .nav-item {
   display: flex;
@@ -525,7 +525,7 @@ height: auto;
     background: url(./img/default-hero-img1920.png);
     background-repeat: no-repeat;
     background-position: center;
-    
+    filter: rgba(0, 0, 0, 0), rgba(0, 0, 0, 1);
     min-width: 1920px;
     min-height: 1037px;
     height: auto;
@@ -546,6 +546,7 @@ height: auto;
   min-height: 1037px;
   height: auto;
   position: absolute;
+  filter: rgba(0, 0, 0, 0), rgba(0, 0, 0, 1);
   left: 0;
   top: 205px;
   transform: translateY(-50px);
