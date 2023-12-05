@@ -458,7 +458,7 @@ letter-spacing: 1.3px;
   background-position: center;
   background-size: cover;
   z-index: -1;
-  max-width: 1920px;
+  max-width: 100%;
   margin-bottom: 130px;
   
 }
@@ -467,7 +467,7 @@ letter-spacing: 1.3px;
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
-min-width: 1441px;
+min-width: 100%;
 min-height: 816px;
 height: auto;
 
@@ -513,7 +513,9 @@ height: auto;
 
 }
 
-
+.img-paralax{
+  display: none;
+}
 
 @media screen and (min-width: 1550px) and (min-width: 1920px) {
   .paralax-bg{
@@ -523,7 +525,7 @@ height: auto;
     background-position: center;
     background-size: cover;
     z-index: -1;
-    max-width: 1920px;
+    max-width: 100%;
     margin-bottom: 130px;
     
   }
@@ -533,30 +535,31 @@ height: auto;
     background-repeat: no-repeat;
     background-position: center;
     filter: rgba(0, 0, 0, 0), rgba(0, 0, 0, 1);
-    min-width: 1920px;
-    min-height: 1037px;
-    height: auto;
     
+    min-height: 1037px;
     position: relative;
     overflow: hidden;
-    
     z-index: 10;
+    min-width: 100%;
+    background-size: cover;
   
   }
 
 .img-paralax{
+  display: block;
   background: url(./img/img-paralax.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 11;
-  min-width: 1920px;
-  min-height: 1037px;
-  height: auto;
-  position: absolute;
-  filter: rgba(0, 0, 0, 0), rgba(0, 0, 0, 1);
-  left: 0;
-  top: 205px;
-  transform: translateY(-50px);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 11;
+    width: 100%;
+    min-height: 865px;
+    position: absolute;
+    filter: rgba(0, 0, 0, 0), rgba(0, 0, 0, 1);
+    left: 0;
+    /* transform: translateX(-50%); */
+    top: 310px; 
+    background-size: cover;
+   
 }
 .img-parallax-animate {
   transition: transform 0.3s ease;
