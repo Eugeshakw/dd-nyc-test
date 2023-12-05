@@ -22,45 +22,48 @@
   <body>
     <header class="header">
       <div class="container con-header">
-        <nav class="nav-link">
-          <ul class="nav-item">
-            <li class="item-link">
-              <a href="/" class="item-link-a">HOME</a>
-            </li>
-            <li class="item-link">
-              <a href="/" class="item-link-a">BUY</a>
-              <svg class="svg-down" width="8px" height="5px">
-                <use href="./icons.svg#icon-vector-down"></use>
-              </svg>
-            </li>
-            <li class="item-link">
-              <a href="/" class="item-link-a">SELL</a>
-              <svg class="svg-down" width="8px" height="5px">
-                <use href="./icons.svg#icon-vector-down"></use>
-              </svg>
-            </li>
-            <li class="item-link">
-              <a href="/" class="item-link-a">ABOUT US</a>
-              <svg class="svg-down" width="8px" height="5px">
-                <use href="./icons.svg#icon-vector-down"></use>
-              </svg>
-            </li>
-            <li class="item-link">
-              <a href="/" class="item-link-a">RESOURCES</a>
-              <svg class="svg-down" width="8px" height="5px">
-                <use href="./icons.svg#icon-vector-down"></use>
-              </svg>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="svg-container">
-          <svg class="svg-icon-tittle" width="117px" height="26px">
-            <use href="./icons.svg#icon-logo"></use>
-          </svg>
-        </div>
-
-        <button type="button" class="btn-contact">CONTACT</button>
+        
+          <nav class="nav-link">
+            <ul class="nav-item">
+              <li class="item-link">
+                <a href="/" class="item-link-a">HOME</a>
+              </li>
+              <li class="item-link">
+                <a href="/" class="item-link-a">BUY</a>
+                <svg class="svg-down" width="8px" height="5px">
+                  <use href="./icons.svg#icon-vector-down"></use>
+                </svg>
+              </li>
+              <li class="item-link">
+                <a href="#section-services" class="item-link-a">SELL</a>
+                <svg class="svg-down" width="8px" height="5px">
+                  <use href="./icons.svg#icon-vector-down"></use>
+                </svg>
+              </li>
+              <li class="item-link">
+                <a href="#section-aboutUs" class="item-link-a">ABOUT US</a>
+                <svg class="svg-down" width="8px" height="5px">
+                  <use href="./icons.svg#icon-vector-down"></use>
+                </svg>
+              </li>
+              <li class="item-link">
+                <a href="#section-footer" class="item-link-a">RESOURCES</a>
+                <svg class="svg-down" width="8px" height="5px">
+                  <use href="./icons.svg#icon-vector-down"></use>
+                </svg>
+              </li>
+            </ul>
+          </nav>
+  
+          <div class="svg-container">
+            <svg class="svg-icon-tittle" width="117px" height="26px">
+              <use href="./icons.svg#icon-logo"></use>
+            </svg>
+          </div>
+  
+          <button type="button" class="btn-contact">CONTACT</button>
+        
+        
       </div>
     </header>
 
@@ -114,7 +117,7 @@
         </div>
       </section>
 
-      <section class="section-aboutUs">
+      <section class="section-aboutUs" id="section-aboutUs">
         <div class="container section-aboutUs-Con">
           <h3 class="tittle-aboutUs">about Us</h3>
           <div class="con-aboutUs">
@@ -177,23 +180,26 @@
           </div>
         </div>
       </section>
-       <section class="section-services">
+       <section class="section-services" id="section-services">
         <div class="container con-services">
           <h3 class="services-tittle">services</h3>
           <div class="con-services-block">
             <div class="img-services-container">
-              <img
+              <div class="img-services-container-overflow">
+                <img
                 src="./img/img-ServicesOne.jpg"
                 class="img-services"
                 alt=""
-              />
-              <div class="overlay">
-                <button class="btn-overlay">
-                  <svg class="button-overlay" width="50" height="50">
+                />
+                <button class="button-inside-overlay">
+                  <svg class="arrow-submit" width="50" height="50">
                     <use href="./icons.svg#icon-arrow-right2"></use>
                   </svg>
                 </button>
+
               </div>
+              
+              
               
               <h4 class="tittle-block-services">Buy a Home</h4>
               <p class="par-block-services">
@@ -206,18 +212,20 @@
             
            
             <div class="img-services-container">
-              <img
-                src="./img/img-ServicesTwo.jpg"
-                class="img-services"
-                alt=""
-              />
-              <div class="overlay">
-                <button class="btn-overlay">
-                  <svg class="button-overlay" width="50" height="50">
-                    <use href="./icons.svg#icon-arrow-right2"></use>
-                  </svg>
-                </button>
+              <div class="img-services-container-overflow">
+                  <img
+                    src="./img/img-ServicesTwo.jpg"
+                    class="img-services"
+                    alt=""
+                  />
+                  <button class="button-inside-overlay">
+                    <svg class="arrow-submit" width="50" height="50">
+                      <use href="./icons.svg#icon-arrow-right2"></use>
+                    </svg>
+                  </button>
               </div>
+              
+             
               <h4 class="tittle-block-services">Sell a Home</h4>
               <p class="par-block-services">
                 Embrace tranquility in your home-selling journey. Let our proven
@@ -226,24 +234,22 @@
                 this journey together!
               </p>
             </div>
+
             <div class="img-services-container">
-              <img
-                src="./img/img-Sevicesthree.jpg"
-                class="img-services"
-                alt=""
-              />
-              <div class="overlay">
-                <button class="btn-overlay">
-                  <svg class="button-overlay" width="50" height="50">
-                    <use href="./icons.svg#icon-arrow-right2"></use>
-                  </svg>
-                </button>
-              </div>
+                <div class="img-services-container-overflow">
+                  <img src="./img/img-Sevicesthree.jpg" class="img-services" alt="" />
+                  <button class="button-inside-overlay">
+                    <svg class="arrow-submit" width="50" height="50">
+                      <use href="./icons.svg#icon-arrow-right2"></use>
+                    </svg>
+                  </button>
+                </div>
+              
               <h4 class="tittle-block-services">Work with Expert</h4>
               <p class="par-block-services">
-                Meet our top-tier REALTORS®, boasting an average of 10 years in
-                real estate and over 150,000 helped clients. Discover the best
-                partner for your property journey today!
+                Meet our top-tier REALTORS®, boasting an average of 10 years in real estate
+                and over 150,000 helped clients. Discover the best partner for your
+                property journey today!
               </p>
             </div>
           </div>
@@ -432,7 +438,7 @@
         </div>
       </section>
 
-      <section class="section-footer">
+      <section class="section-footer" id="section-footer">
         <div class="container">
           <div class="container-up-footer">
             <div class="con-subscibe">
@@ -600,7 +606,7 @@
              
             </div>
             <!-- <img class="logo-img" src="./img/img-logo.png" width="502px" height="88px" alt=""> -->
-            <svg class="logo-footer" width="502" height="118">
+            <svg class="logo-footer" width="373px;" height="88px">
               <use href="./icons.svg#icon-logo"></use>
             </svg>
            

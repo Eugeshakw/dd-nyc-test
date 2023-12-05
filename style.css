@@ -86,7 +86,9 @@ textarea,
 select {
   font: inherit;
 }
-
+button{
+  cursor: pointer;
+}
 
 
 :root {
@@ -112,10 +114,11 @@ select {
 }
 
 .container {
-  min-width: 1440px;
+  max-width: 1440px;
   padding-left: 60px;
   padding-right: 60px;
-  /* margin: 0 auto; */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (min-width: 1920px){
@@ -129,15 +132,19 @@ select {
 
 
 .header{
+  
   position: relative;
 }
 .con-header {
   display: flex;
-  align-items: center;
-  position: absolute;
-  width: 100%;
-  z-index: 10;
-  top: 20px;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    justify-content: center;;
 }
 .nav-item {
   display: flex;
@@ -606,6 +613,7 @@ text-transform: uppercase;
 .con-aboutUs{
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .con-img-AboutUs{
   display: flex;
@@ -843,8 +851,9 @@ letter-spacing: 0.84px;
 
 .con-services-block{
   display: flex;
+  justify-content: center;
   gap: 30px;
-  margin-bottom: 130px;
+  
 }
 .con-services{
   padding-bottom:130px
@@ -898,7 +907,7 @@ min-width: 420px;
 @media screen and (min-width: 1550px) and (min-width: 1920px) {
   .con-services-block{
     display: flex;
-    gap: 170px;
+    
   }
   .con-services{
     margin-bottom: 230px;
@@ -950,6 +959,7 @@ min-width: 420px;
 .video{
   max-width: 100%;
   max-height: 100%;
+  margin-bottom: 20px;
 }
 .con-video{
   padding-bottom: 130px;
@@ -995,7 +1005,7 @@ max-width: 481px;
 /* tasty */
 .con-main-test {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: 38px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-bottom: none;
@@ -1287,7 +1297,7 @@ text-transform: uppercase;
 
 
 /* Стили для скроллбара */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 0px;
   height: 0px;
   background-color: #121212;
@@ -1307,7 +1317,7 @@ text-transform: uppercase;
 
 ::-webkit-scrollbar-button:hover {
   background-color: #202020;
-}
+} */
 
 /* Анимация */
 
@@ -1332,94 +1342,89 @@ text-transform: uppercase;
   };
 }
 
-.img-services-container {
+.img-services-container  {
   display: flex;
-  position: relative;
-  width: 420px;
-  height: 380px;
+  
+  
+  /* width: 420px; */
+  /* height: 380px; */
   border-radius: 10px;
-  z-index: 11;
+ 
   flex-direction: column;
 }
-
-.img-services {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.img-services-container-overflow{
+  position: relative;
+  
 }
-
-.overlay {
+.img-services-container-overflow::before{
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Цвет темного оверлея */
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0); /* Начальный цвет фона */
-  transition: background-color 0.4s ease; /* Анимация перехода */
-}
-
-
-.button-overlay {
-  position: absolute;
-  bottom: 20px; /* Отступ снизу */
-  right:  30px;
-  transform: translateX(-50%);
   opacity: 0;
-  background-color: #FFF;
+  transition: opacity 0.3s ease; /* Анимация перехода */
+}
+
+.img-services-container-overflow:hover::before {
+  opacity: 1; /* Показываем оверлей при наведении */
+}
+.button-inside-overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(-50%, -50%);
+  background-color: #fff; /* Цвет фона кнопки */
+  color: #000; /* Цвет текста кнопки */
   border-radius: 50%;
-  z-index: 10;
-  fill: var(--default-btn-color);
-  stroke: var(--default-btn-color);
+ overflow: hidden;
+  
+  width: 59px;
+  height: 59px;
+  border: none;
   cursor: pointer;
-  right: 20px;
-
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Анимация перехода */
+}
+.img-services-container-overflow:hover .button-inside-overlay {
+  opacity: 1; /* Показываем кнопку при наведении */
 }
 
-
-
-.img-services-container:hover .button-overlay {
-  opacity: 1;
-  -webkit-animation: slide-out-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: slide-out-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+.img-services {
+  width: 420px;
+  height: 380px;
+  object-fit: cover;
 }
-
-.img-services-container:hover .overlay {
-  background-color: rgba(0, 0, 0, 0.4); /* Цвет фона при ховере */
+.overlay{
+  overflow: hidden;
+  background-color: #000;
 }
+/* overlay */
+
+
 
 
 @media screen and (min-width: 1920px) {
   .img-services-container {
     display: flex;
     position: relative;
-    width: 420px;
-    height: 380px;
-    border-radius: 10px;
-    flex-direction: column;
-    margin-right: 20px; /* Добавляем отступы справа */
-  }
-  
-  .img-services {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 570px;
     height: 517px;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0); /* Начальный цвет фона */
-    transition: background-color 0.4s ease; /* Анимация перехода */
+    flex-direction: column;
+   
   }
   
-  .img-services-container:hover .overlay {
-    background-color: rgba(0, 0, 0, 0.4); /* Цвет фона при ховере */
+  .img-services {
+    width: 570px;
+    height: 517px;
+    object-fit: cover;
   }
+  
+
 }
 
 
@@ -1542,6 +1547,7 @@ text-transform: uppercase;
 .container-up-footer{
   padding-top: 75px;
   display: flex;
+  justify-content: center;
   margin-bottom: 151px;
 }
 .con-subscibe{
@@ -1626,6 +1632,7 @@ margin-bottom: 50px;
   outline: none;
   padding: 0;
   cursor: pointer;
+  overflow: hidden;
 }
 .arrow-submit:hover{
   
@@ -1796,6 +1803,7 @@ text-transform: uppercase;
 }
 .con-middle-footer{
   display: flex;
+  justify-content: center;
   margin-bottom: 42px;
 }
 .con-addres-tittle{
@@ -1877,6 +1885,7 @@ text-transform: uppercase;
 
 .con-pre-last-footer{
   display: flex;
+  justify-content: center;
   margin-bottom: 35px;
 }
 .logo-img{
@@ -1884,6 +1893,7 @@ text-transform: uppercase;
 }
 .con-last-footer{
   display: flex;
+  justify-content: center;
   padding-bottom: 29px;
 
 }
@@ -1971,7 +1981,7 @@ text-transform: uppercase;
   letter-spacing: 0.84px;
   min-width: 188px;
 
-  margin-right: 219px;
+  
 }
 .par-last-footerOne{
   color: var(--white-opacity-40, rgba(255, 255, 255, 0.40));
@@ -2103,6 +2113,11 @@ text-transform: uppercase;
             transform: translateX(200px);
     opacity: 0;
   }
+  60% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  opacity: 0;
+  }
   100%{
     -webkit-transform: translateX(0);
     transform: translateX(0);
@@ -2110,7 +2125,7 @@ text-transform: uppercase;
   }
  
 }
-@keyframes slide-out-right {
+/* @keyframes slide-out-right {
   0% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
@@ -2127,12 +2142,12 @@ text-transform: uppercase;
     opacity: 1;
   }
  
-}
+} */
 /* btn next */
 
 .logo-footer{
   fill: #FFF;
-  min-width: 503px;
+  
 
 }
 
