@@ -2149,9 +2149,18 @@ text-transform: uppercase;
 /* btn next */
 
 .logo-footer{
-  fill: #FFF;
-  
+  fill: #fff;
+  width: 373px;
+  height: 88px;
+}
 
+@media screen and (min-width:1550px){
+  .logo-footer{
+    fill: #FFF;
+    width: 502px;
+    height: 118px;
+  
+  }  
 }
 
 
