@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         window.addEventListener("resize", updateListItemWidth);
     }         
 }
+
 applyStyle();
 window.addEventListener('resize', applyStyle);
 
@@ -58,9 +59,6 @@ function newStyle() {
     window.addEventListener("resize", updateListItemWidth);
   }
 }
-
-
-
 
 newStyle()
 window.addEventListener('resize', newStyle);
